@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolsa de Trabajo ESEN</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="./CSS/ofertas.css">
+    <link rel="stylesheet" href="./CSS/aplicar.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./Recursos desafio/images/logo2.png" alt="">
+            </div>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./ofertas.html">Ofertas</a></li>
+                <li><a href="./consejos.html">Consejos</a></li>
+                <li><a href="./aplicar.html">Aplicar</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="login">
+        <form action="./aplicar.php" method="post">
+            <h1>Formulario de Aplicación</h1>
+    
+            <fieldset id="logindatos">
+    
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" pattern="^[a-zA-Z\s]+$" 
+                title="Solo se aceptan letras" class="control" placeholder="Nombre" required>
+                <br>
+               
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" pattern="^[a-zA-Z\s]+$"
+                title="Solo se aceptan letras" class="control" placeholder="Apellidos" required>
+                <br>
+                
+                <label for="carnet">Carnet:</label>
+                <input type="text" id="carnet" pattern="^[0-9]{8}$" 
+                title="Debe contener 8 dígitos numéricos" class="control" placeholder="Carnet" required>
+                <br>
+                
+                <label for="departamento">Departamento de residencia:</label>
+                <select id="departamento" class="control" required>
+                    <option value="" disabled selected>Seleccione su departamento</option>
+                    <option value="San Salvador">San Salvador</option>
+                    <option value="La Libertad">La Libertad</option>
+                    <option value="Santa Ana">Santa Ana</option>
+                    <option value="San Miguel">San Miguel</option>
+                </select>
+                <br>
+                
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" min="18" max="80" class="control" placeholder="Edad" required>
+                <br>
+    
+                <label for="genero">Género:</label>
+                <select id="genero" class="control" required>
+                    <option value="" disabled selected>Seleccione su género</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                </select>
+                <br>
+    
+                <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fechaNacimiento" class="control" required>
+                <br>
+    
+                <label for="telefono">Número de teléfono:</label>
+                <input type="tel" id="telefono" pattern="^[0-9]{4}-?[0-9]{4}$" 
+                title="Formato: 2222-2222" class="control" placeholder="Número de teléfono" required>
+                <br>
+    
+                <label for="carrera">Carrera:</label>
+                <select id="carrera" class="control" required>
+                    <option value="" disabled selected>Seleccione su carrera</option>
+                    <option value="ISND">Ingeniería de Software y Negocios Digitales</option>
+                    <option value="IN">Ingeniería de Negocios</option>
+                    <option value="LEN">Licenciatura en Economía y Negocios</option>
+                    <option value="LCJ">Licenciatura en Ciencias Jurídicas</option>
+                </select>
+                <br>
+    
+                <label for="pretensionSalarial">Pretensión salarial ($):</label>
+                <input type="number" id="pretensionSalarial" min="0" step="0.10" class="control" placeholder="Pretensión salarial" required>
+                <br>
+
+                <button id="boton" type="submit">Enviar</button>
+    
+            </fieldset>
+        </form>
+    </section>
+
+    
+
+    <footer class="ofertas-footer">
+        <p>Creado por: Jaime Lazo. Carnet: 20235806</p>
+    </footer>
+</body>
+</html>
